@@ -54,3 +54,15 @@ VALUES ('nargiz', 'nargiz', 'user', 'nargiz.jpg');
 
 INSERT INTO users (username, password, role, profile_picture)
 VALUES ('sevinj', 'sevinj', 'user', 'default.jpg');
+
+
+CREATE TABLE messages (
+       id INT NOT NULL AUTO_INCREMENT,
+       username VARCHAR(50) NOT NULL,
+       message TEXT NOT NULL,
+       date_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (id)
+     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO messages (username, message)
+     VALUES ('john_doe', 'This is a test message.');
