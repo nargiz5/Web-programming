@@ -66,3 +66,10 @@ CREATE TABLE messages (
 
 INSERT INTO messages (username, message)
      VALUES ('john_doe', 'This is a test message.');
+
+CREATE TABLE LoginAttempts (
+    username VARCHAR(255) PRIMARY KEY,
+    failed_attempts INT DEFAULT 0,
+    last_failed_attempt BIGINT DEFAULT 0
+);
+
